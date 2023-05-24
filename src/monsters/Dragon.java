@@ -27,7 +27,5 @@ public class Dragon extends Monster {
 	//攻撃力の値を乱数で決定。12～18
 	//スーパークラスLivingのフィールド変数offensiveに代入
 	super.offensive = Dice.get(12, 18);
-	
 	}
-
 }

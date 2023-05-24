@@ -20,13 +20,11 @@ import utils.Dice;
 
 // Livingクラスを継承した、人間を表現する抽象クラスを作成
 public abstract class Human extends Living {
-	
 	//　コンストラクタを定義
 	public Human(String name, String weapon) {
 		// Livingクラスで定義したコンストラクタを利用する
 		// スーパークラスのコンストラクタ呼び出し⇒ super();
 		super(name, weapon);
-		
 	}
 	
 	//　attackメソッドのオーバーライド
@@ -37,15 +35,15 @@ public abstract class Human extends Living {
 		//Diceクラスのgetメソッドを使う
 		int num = Dice.get(1, 10);
 		int damage = num * super.offensive;  //Livingクラスの攻撃力(offensive)フィールドを参照
+		
 		// 相手のHPをダメージ値だけ減らす
 		target.hp = target.hp - damage;
+		
 		// 自分の攻撃力を1だけ減らす⇒ Livingクラスのoffensive変数に-1したものを代入
 		super.offensive = super.offensive - 1;
 		
 		// コンソールにステータスを表示
 		System.out.println( "\n「" + this.name + "」が「" + this.weapon + "」で攻撃！「" + target.name +"」に" +  damage + "のダメージを与えた。" );
-		System.out.println( "しかし自分の攻撃力も1減少した。" );
-		
+		System.out.println( "しかし自分の攻撃力も1減少した。" );	
 	}
-
 }

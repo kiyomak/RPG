@@ -92,7 +92,6 @@ public class Main {
 				//モンスターグループから選ばれていたモンスター（defenseMonsters変数）を削除する。
 				// monstersリストのremoveメソッドで（）内の要素を削除
 				monsters.remove(defenseMonster);
-	
 			}
 			
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
@@ -102,7 +101,6 @@ public class Main {
 				System.out.println("#### 人間達は勝利した！！ ####");
 				//while内の処理をここで終了
 				break;
-				
 			}
 			
 			System.out.println("\n[モンスターのターン！]\n");
@@ -151,9 +149,9 @@ public class Main {
 	// 静的メソッド(static)で、Humanクラス型のメソッドchoiceHuman(引数はhumansリスト)
 	public static Human choiceHuman(List<Human> humans) {
 		//型はHumanクラス型(初期化で変数nameを継承している)。Listインターフェースにある .get()メソッドを使用
-		/* .get()内で、Diceのget(int min, int max)メソッドを呼び出す。  .size()メソッドはListインターフェースのメソッド。リスト内の要素数を返す。
-		 * 最小値：0、最大値：2⇒返り値は「 r.nextInt(2 - 0 + 1) + 0;」で要素数3のうち、要素「0，1，2」のどれか1つが返される 		*/
-			Human human = humans.get(Dice.get(0, humans.size() - 1));
+		// .get()内で、Diceのget(int min, int max)メソッドを呼び出す。  .size()メソッドはListインターフェースのメソッド。リスト内の要素数を返す。
+		// 最小値：0、最大値：2⇒返り値は「 r.nextInt(2 - 0 + 1) + 0;」で要素数3のうち、要素「0，1，2」のどれか1つが返される
+		Human human = humans.get(Dice.get(0, humans.size() - 1));
 		//Livingのname変数のgetterメソッドにhumans.get()のランダムで選ばれた要素数が（）に入る。
 		System.out.printf("人間グループから 「%s」 のお出ましだ！\n", human.getName());
 		//リストから選ばれた要素が返される	
@@ -181,6 +179,4 @@ public class Main {
 			System.out.println(monster);
 		}
 	}
-	
-	
 }

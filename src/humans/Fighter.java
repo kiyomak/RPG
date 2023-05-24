@@ -27,7 +27,5 @@ public class Fighter extends Human {
 		//攻撃力の値は乱数を振って決定する。17～23
 		// スーパークラスLivingのフィールド変数offensiveに代入
 		super.offensive = Dice.get(17, 23);
-		
 	}
-	
 }

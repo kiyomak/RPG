@@ -27,8 +27,6 @@ public class Brave extends Human {
 		
 		//攻撃力の値は乱数を振って決定する。7~13
 		// スーパークラスLivingのフィールド変数offensiveに代入
-		super.offensive = Dice.get(7, 13);
-		
+		super.offensive = Dice.get(7, 13);	
 	}
-	
 }

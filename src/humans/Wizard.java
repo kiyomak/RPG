@@ -27,7 +27,5 @@ public class Wizard extends Human {
 		//攻撃力の値は乱数を振って決定する。12~18
 		// スーパークラスLivingのフィールド変数offensiveに代入
 		super.offensive = Dice.get(12, 18);
-		
 	}
-	
 }

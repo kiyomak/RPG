@@ -18,7 +18,6 @@ import utils.Dice;
 
 // モンスターを表現する抽象クラス
 public abstract class Monster extends Living {
-
 	// コンストラクタ
 	public Monster(String name, String weapon) {
 		// Livingクラスで定義したコンストラクタを利用する
@@ -38,6 +37,5 @@ public abstract class Monster extends Living {
 			target.hp = target.hp - damage;
 		// コンソールにステータスを表示
 			System.out.println( "\n「" + this.name + "」が「" + this.weapon + "」で攻撃！「" + target.name +"」に" +  damage + "のダメージを与えた。" );
-		
 	}
 }

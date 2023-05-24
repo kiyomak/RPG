@@ -27,7 +27,5 @@ public class Slime extends Monster {
 		//攻撃力の値を乱数で決定する。5～11
 		//スーパークラスLivingのフィールド変数offensiveに代入する
 		super.offensive = Dice.get(5, 11);
-		
 	}
-
 }
